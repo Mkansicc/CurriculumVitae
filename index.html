@@ -3,242 +3,216 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Collen Mkansi | CV</title>
-  <meta name="description" content="Modern CV - Collen Mkansi" />
+  <title>Collen M | Modern CV Website Creation</title>
+  <meta name="description" content="Collen M builds modern CV websites: dark/light theme, print & save as PDF, mobile-friendly, one link to share." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="topbar">
+  <!-- Top Bar -->
+  <header class="topbar" id="top">
     <div class="container topbar-inner">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="avatar" aria-hidden="true">CM</span>
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="logo" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></span>
         <div class="brand-text">
-          <div class="name">Collen Mkansi</div>
-          <div class="role">IT Technician • Server Admin • Networking</div>
+          <div class="brand-name">Collen M</div>
+          <div class="brand-sub">Modern CV Website Creation</div>
         </div>
       </a>
 
-      <div class="actions">
-        <button id="themeBtn" class="btn ghost" type="button" title="Toggle theme" aria-label="Toggle theme">
-          <span class="icon" aria-hidden="true">🌓</span>
-          <span class="hide-sm">Theme</span>
-        </button>
+      <nav class="nav" aria-label="Primary">
+        <a href="#design">Modern design</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
 
-        <button class="btn" type="button" onclick="window.print()" title="Print / Save PDF">
-          <span class="icon" aria-hidden="true">🖨️</span>
-          <span class="hide-sm">Print</span>
+      <div class="top-actions">
+        <button id="themeBtn" class="btn ghost" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <i class="fa-solid fa-circle-half-stroke"></i> <span class="hide-sm">Theme</span>
         </button>
-
-        <a class="btn primary" href="#contact">
-          <span class="icon" aria-hidden="true">✉️</span>
-          Contact
-        </a>
+        <button class="btn" type="button" id="printBtn" title="Print / Save as PDF">
+          <i class="fa-solid fa-print"></i> <span class="hide-sm">Print</span>
+        </button>
       </div>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" title="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
-  </div>
 
-  <main id="top" class="container layout">
-    <!-- LEFT / SIDEBAR -->
-    <aside class="card sidebar">
-      <section class="stack">
-        <div class="hero">
-          <div class="hero-avatar" aria-hidden="true">CM</div>
-          <div>
-            <h1 class="h1">Collen Mkansi</h1>
-            <p class="sub">
-              IT Technician with hands-on experience in troubleshooting, Windows deployments, Microsoft 365,
-              networking, and server administration. Building community-focused IT solutions and support services.
-            </p>
-          </div>
-        </div>
+    <!-- Mobile menu -->
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a href="#design">Modern design</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
 
-        <div class="pill-row">
-          <span class="pill">South Africa</span>
-          <span class="pill">Available for work</span>
-          <span class="pill">On-site / Remote</span>
-        </div>
-      </section>
-
-      <section class="stack">
-        <h2 class="h2">Contact</h2>
-        <div class="kv">
-          <div class="k">Phone</div>
-          <div class="v"><a href="tel:+27723427049">+27 72 342 7049</a></div>
-
-          <div class="k">Email</div>
-          <div class="v"><a href="mailto:mkansicc@gmail.com">mkansicc@gmail.com</a></div>
-
-          <div class="k">GitHub</div>
-          <div class="v">
-            <a href="https://github.com/Mkansicc" target="_blank" rel="noreferrer">
-              github.com/Mkansicc
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="stack">
-        <h2 class="h2">Core Skills</h2>
-        <div class="tags">
-          <span class="tag">Windows 10/11</span>
-          <span class="tag">Troubleshooting</span>
-          <span class="tag">Microsoft Office</span>
-          <span class="tag">Antivirus & Cleanup</span>
-          <span class="tag">Networking</span>
-          <span class="tag">TCP/IP</span>
-          <span class="tag">Wi-Fi & Wireless</span>
-          <span class="tag">Servers</span>
-          <span class="tag">Backups</span>
-          <span class="tag">Documentation</span>
-          <span class="tag">Customer Support</span>
-        </div>
-      </section>
-
-      <section class="stack">
-        <h2 class="h2">Certs & Learning</h2>
-        <ul class="list">
-          <li><strong>Computer Networking (UNISA)</strong> — Completed 2024</li>
-          <li><strong>CompTIA A+</strong> (College SA) — Completed 2024t</li>
-          <li><strong>CompTIA Network+</strong> (College SA) — Completed 2025</li>
-          <li><strong>Ethical Hacking</strong> — next focus</li>
-        </ul>
-      </section>
-    </aside>
-
-    <!-- RIGHT / MAIN CONTENT -->
-    <section class="content">
-      <section class="card stack">
-        <h2 class="h2">Experience</h2>
-
-        <article class="item">
-          <div class="item-head">
-            <div>
-              <h3 class="h3">IT Technician & Server Administrator</h3>
-              <p class="meta">Southern African Wildlife College • 2018 – Present</p>
-            </div>
-            <span class="badge">Full-time</span>
-          </div>
-          <ul class="bullets">
-            <li>Installed and supported Windows, Microsoft Office, and essential software for staff and labs.</li>
-            <li>Diagnosed hardware/software issues (boot failures, blank screens, BSOD) and improved uptime.</li>
-            <li>Supported network connectivity, user accounts, and basic server administration tasks.</li>
-            <li>Documented SOPs and provided user training and technical guidance.</li>
-          </ul>
-        </article>
-
-        <article class="item">
-          <div class="item-head">
-            <div>
-              <h3 class="h3">Environmental Monitor</h3>
-              <p class="meta">Southern African Wildlife College • 2013 – 2018</p>
-            </div>
-            <span class="badge">Operations</span>
-          </div>
-          <ul class="bullets">
-            <li>Supported environmental monitoring activities and operational reporting.</li>
-            <li>Worked in disciplined field settings, following strict procedures and safety practices.</li>
-          </ul>
-        </article>
-
-        <article class="item">
-          <div class="item-head">
-            <div>
-              <h3 class="h3">Co-Founder — CoTeSy IT Services</h3>
-              <p class="meta">Community IT Services • Ongoing</p>
-            </div>
-            <span class="badge">Business</span>
-          </div>
-          <ul class="bullets">
-            <li>Delivered PC repair and software services: Windows installs, Office installs, optimization, malware cleanup.</li>
-            <li>Helped community members with troubleshooting and setting up devices for work and study.</li>
-            <li>Built simple systems for tracking client issues, follow-ups, and service records.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="card stack">
-        <h2 class="h2">Projects</h2>
-
-        <article class="item">
-          <div class="item-head">
-            <div>
-              <h3 class="h3">Stockvel & Funeral Assist Management (Concept)</h3>
-              <p class="meta">Excel → Web App roadmap • Reporting & receipts</p>
-            </div>
-            <span class="badge">Community</span>
-          </div>
-          <ul class="bullets">
-            <li>Designed a simple process for monthly contributions, tracking payments, and generating reports.</li>
-            <li>Planned future upgrade path from Excel to a lightweight database-backed system.</li>
-          </ul>
-        </article>
-
-        <article class="item">
-          <div class="item-head">
-            <div>
-              <h3 class="h3">IT Service Website (GitHub Pages)</h3>
-              <p class="meta">Static site • Mobile friendly</p>
-            </div>
-            <span class="badge">Web</span>
-          </div>
-          <ul class="bullets">
-            <li>Created a clean marketing website for CoTeSy IT Services with contact buttons and services list.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="card stack">
-        <h2 class="h2">Education</h2>
-        <article class="item">
-          <div class="item-head">
-            <div>
-              <h3 class="h3">Computer Networking</h3>
-              <p class="meta">UNISA</p>
-            </div>
-            <span class="badge">Studies</span>
-          </div>
-          <p class="text">
-            Focus on networking fundamentals, troubleshooting, and practical IT support skills.
-          </p>
-        </article>
-      </section>
-
-      <section class="card stack">
-        <h2 class="h2">Leadership & Community</h2>
-        <ul class="bullets">
-          <li>Youth Secretary (10 villages) — Manyeleti Nazarene Revival Church</li>
-          <li>Executive Church Committee Secretary; leads youth & children’s ministries</li>
-          <li>Head Coach — Liverpool FC (Welverdiend soccer league, 2019–2025)</li>
-        </ul>
-      </section>
-
-      <section id="contact" class="card stack">
-        <h2 class="h2">Contact / Availability</h2>
-        <p class="text">
-          If you’d like to work with me or hire me, use the quick links below.
+  <!-- Modern design (start here) -->
+  <section id="design" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Modern • Clean • Mobile-first</p>
+        <h1 class="h1">Modern CV website that gets you noticed.</h1>
+        <p class="sub">
+          Built by <strong>Collen M</strong> — dark/light theme, print-ready styling, and one link to share.
         </p>
 
         <div class="cta-row">
-          <a class="btn primary" href="mailto:mkansicc@gmail.com">Email me</a>
-          <a class="btn" href="tel:+27723427049">Call</a>
-          <a class="btn ghost" href="https://wa.me/27723427049" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a class="btn primary" href="#packages"><i class="fa-solid fa-rocket"></i> View Packages</a>
+          <a class="btn ghost" href="#contact"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         </div>
-      </section>
+      </div>
+
+      <div class="grid3">
+        <div class="card feature reveal">
+          <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Clean sections</h3>
+          <p>Profile, Skills, Experience, Education — easy to scan.</p>
+        </div>
+
+        <div class="card feature reveal">
+          <div class="icon"><i class="fa-solid fa-circle-half-stroke"></i></div>
+          <h3>Beautiful theme</h3>
+          <p>Dark & Light mode — one click switch.</p>
+        </div>
+
+        <div class="card feature reveal">
+          <div class="icon"><i class="fa-solid fa-file-pdf"></i></div>
+          <h3>Print / Save as PDF</h3>
+          <p>One click export for attachments and HR.</p>
+        </div>
+      </div>
+
+      <div class="banner card reveal">
+        <div>
+          <h3 class="banner-title"><i class="fa-solid fa-link"></i> One link to share</h3>
+          <p class="banner-sub">Send your CV website via WhatsApp, email, LinkedIn.</p>
+        </div>
+        <a class="btn primary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="h2">Packages</h2>
+        <p class="sub">Simple options — edit the prices (R---) to your choice.</p>
+      </div>
+
+      <div class="grid3 pricing">
+        <div class="card price reveal">
+          <div class="price-head">
+            <h3>Starter</h3>
+            <p class="price-tag"><strong>R---</strong></p>
+          </div>
+          <ul class="checks">
+            <li><i class="fa-solid fa-check"></i> 1-page CV website</li>
+            <li><i class="fa-solid fa-check"></i> Mobile-friendly layout</li>
+            <li><i class="fa-solid fa-check"></i> Print / Save as PDF</li>
+          </ul>
+          <a class="btn primary" href="#contact"><i class="fa-solid fa-cart-shopping"></i> Choose Starter</a>
+        </div>
+
+        <div class="card price popular reveal">
+          <div class="badge"><i class="fa-solid fa-crown"></i> Popular</div>
+          <div class="price-head">
+            <h3>Pro</h3>
+            <p class="price-tag"><strong>R---</strong></p>
+          </div>
+          <ul class="checks">
+            <li><i class="fa-solid fa-check"></i> Everything in Starter</li>
+            <li><i class="fa-solid fa-check"></i> Dark/Light theme toggle</li>
+            <li><i class="fa-solid fa-check"></i> Projects + skills tags</li>
+          </ul>
+          <a class="btn primary" href="#contact"><i class="fa-solid fa-rocket"></i> Choose Pro</a>
+        </div>
+
+        <div class="card price reveal">
+          <div class="price-head">
+            <h3>Premium</h3>
+            <p class="price-tag"><strong>R---</strong></p>
+          </div>
+          <ul class="checks">
+            <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+            <li><i class="fa-solid fa-check"></i> Extra sections (Awards/Certs)</li>
+            <li><i class="fa-solid fa-check"></i> Priority delivery</li>
+          </ul>
+          <a class="btn primary" href="#contact"><i class="fa-solid fa-gem"></i> Choose Premium</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="h2">Contact</h2>
+        <p class="sub">Send your details and I’ll start building your CV website.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card contact-card reveal">
+          <h3 class="h3"><i class="fa-solid fa-paper-plane"></i> Send your info</h3>
+          <ul class="bullets">
+            <li><i class="fa-solid fa-user"></i> Full name + role</li>
+            <li><i class="fa-solid fa-briefcase"></i> Experience</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> Education + certificates</li>
+            <li><i class="fa-solid fa-screwdriver-wrench"></i> Skills + projects</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn primary" id="waBtn" href="https://wa.me/27723427049" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp: 072 342 7049
+            </a>
+            <a class="btn" href="tel:+27723427049">
+              <i class="fa-solid fa-phone"></i> Call
+            </a>
+          </div>
+
+          <p class="tiny muted">Change the number in the code if needed.</p>
+        </div>
+
+        <div class="card contact-card reveal">
+          <h3 class="h3"><i class="fa-solid fa-circle-info"></i> Why choose Collen M</h3>
+          <div class="list-cards">
+            <div class="mini">
+              <div class="mini-title"><i class="fa-solid fa-star"></i> Professional look</div>
+              <div class="mini-sub">Clean and premium layout that stands out.</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title"><i class="fa-solid fa-file-pdf"></i> Easy PDF export</div>
+              <div class="mini-sub">One click Print / Save as PDF anytime.</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title"><i class="fa-solid fa-link"></i> Simple sharing</div>
+              <div class="mini-sub">One link that HR can open instantly.</div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <p class="tiny">© <span id="year"></span> Collen M • Modern CV Website Creation</p>
+        </div>
+      </div>
 
       <footer class="footer">
-        <span>© <span id="year"></span> Collen Mkansi</span>
-        <span class="sep">•</span>
-        <a href="#top">Back to top</a>
+        <a href="#top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
       </footer>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
